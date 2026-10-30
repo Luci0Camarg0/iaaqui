@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>IAqui · Teste um atendente com IA</title>
+  <meta name="description" content="Converse com um atendente virtual de exemplo: ele tira dúvidas, envia orçamento, agenda horário e passa para a equipe quando precisa. Demonstração da IAqui.">
+  <meta name="theme-color" content="#0A0A0F">
+  <meta property="og:title" content="Teste um atendente com IA no WhatsApp · IAqui">
+  <meta property="og:description" content="Escolha um tipo de negócio e converse. Dúvidas, orçamento, agendamento e passagem para um humano, tudo em 2 minutos.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/og.png">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="page">
+    <aside class="side">
+      <a href="../" class="brand" aria-label="Voltar ao site da IAqui">
+        <img src="../assets/logo.svg" alt="IAqui" width="82" height="30">
+      </a>
+      <p class="eyebrow">Demonstração</p>
+      <h1>Converse com um <span class="grad">atendente com IA</span>.</h1>
+      <p class="lead">Escolha um negócio de exemplo e fale como se fosse um cliente. Pergunte, peça orçamento, marque um horário.</p>
+
+      <div class="picker" role="radiogroup" aria-label="Tipo de negócio">
+        <button class="pick" data-biz="clinica" role="radio">🦷 Clínica odontológica</button>
+        <button class="pick" data-biz="academia" role="radio">💪 Academia</button>
+        <button class="pick" data-biz="pet" role="radio">🐾 Pet shop e veterinária</button>
+      </div>
+
+      <ul class="checks">
+        <li><b>Conhece a empresa:</b> horário, endereço, preços e formas de pagamento.</li>
+        <li><b>Tira dúvidas</b> a qualquer hora, inclusive de madrugada.</li>
+        <li><b>Envia orçamento</b> na hora, com valores e validade.</li>
+        <li><b>Agenda</b> e confirma o horário com o cliente.</li>
+        <li><b>Passa para a sua equipe</b> quando o assunto pede uma pessoa.</li>
+      </ul>
+
+      <a class="btn btn-neon" data-cta target="_blank" rel="noopener">Quero isso no meu negócio</a>
+      <p class="fine">Empresas, endereços e valores são fictícios. Na versão real, tudo é configurado com as informações do seu negócio e funciona no seu WhatsApp.</p>
+    </aside>
+
+    <section class="phone" aria-label="Conversa de demonstração">
+      <header class="wa-head">
+        <a href="../" class="back" aria-label="Voltar ao site">‹</a>
+        <div class="avatar" id="avatar">🦷</div>
+        <div class="who">
+          <strong id="biz-name">Clínica</strong>
+          <span id="biz-status">online</span>
+        </div>
+        <button class="restart" id="restart" aria-label="Recomeçar conversa" title="Recomeçar">↻</button>
+      </header>
+
+      <div class="mobile-picker" role="radiogroup" aria-label="Tipo de negócio">
+        <button class="pick" data-biz="clinica" role="radio">🦷 Clínica</button>
+        <button class="pick" data-biz="academia" role="radio">💪 Academia</button>
+        <button class="pick" data-biz="pet" role="radio">🐾 Pet shop</button>
+      </div>
+
+      <div class="chat" id="chat" aria-live="polite"></div>
+
+      <div class="chips" id="chips"></div>
+
+      <form class="composer" id="composer" autocomplete="off">
+        <input id="msg" type="text" placeholder="Digite uma mensagem" aria-label="Mensagem" maxlength="300">
+        <button type="submit" aria-label="Enviar">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12.6 2-12.6 2z" fill="currentColor"/></svg>
+        </button>
+      </form>
+
+      <a class="mobile-cta" data-cta target="_blank" rel="noopener">Gostou? <b>Quero isso no meu negócio</b> →</a>
+    </section>
+  </div>
+
+  <script src="demo.js"></script>
+</body>
+</html>
