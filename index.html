@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IAqui · A IA chegou aqui. No seu negócio.</title>
+  <meta name="description" content="A IAqui leva inteligência artificial para pequenas e médias empresas e MEIs de todo o Brasil: chatbots, automações, planilhas, conteúdo e treinamento. Pacote fechado, software entregue completo, sem mensalidade.">
+  <meta name="theme-color" content="#0A0A0F">
+  <meta property="og:title" content="IAqui · A IA chegou aqui. No seu negócio.">
+  <meta property="og:description" content="IA sob medida para pequenas e médias empresas de todo o Brasil. Projeto com preço fechado e pagamento único.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.png">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ícones (traço fino, estilo SF Symbols) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A2.5 2.5 0 0 1 3 13.5" fill="none"/><circle cx="8.5" cy="9.5" r=".9"/><circle cx="12" cy="9.5" r=".9"/><circle cx="15.5" cy="9.5" r=".9"/></symbol>
+      <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none"/><path d="M12 2.8v2.4M12 18.8v2.4M21.2 12h-2.4M5.2 12H2.8M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7M18.5 18.5l-1.7-1.7M7.2 7.2 5.5 5.5" fill="none"/><circle cx="12" cy="12" r="6.6" fill="none"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" fill="none"/><path d="M19 16l.7 1.8L21.5 18.5l-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z" fill="none"/></symbol>
+      <symbol id="i-grad" viewBox="0 0 24 24"><path d="M2.5 9 12 4.5 21.5 9 12 13.5z" fill="none"/><path d="M6.5 11v4.5c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3V11M21.5 9v5" fill="none"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8" fill="none"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8" fill="none"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8" fill="none"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8" fill="none"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3.5 20.5h17" fill="none"/><path d="M6.5 16.5v-4M11 16.5V8.5M15.5 16.5v-6M20 16.5v-11" fill="none"/></symbol>
+      <symbol id="i-table" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2.2" fill="none"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 9.5v10" fill="none"/></symbol>
+      <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2.5 5 13.5h6l-1 8 8.5-11h-6z" fill="none"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z" fill="none"/><circle cx="12" cy="9.8" r="2.3" fill="none"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none"/><path d="m3.8 6.5 8.2 6.2 8.2-6.2" fill="none"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8.5 8.5 0 1 1 8 18.8z" fill="none"/><path d="M9.2 8.6c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.6c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.6-.5.8-.6.4-1.7.6-3.2-.2-1.6-.8-3-2.3-3.8-3.8-.7-1.4-.6-2.5-.4-3.3z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none"/><circle cx="12" cy="12" r="4" fill="none"/><circle cx="17.2" cy="6.8" r="1"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="topo">
+    <div class="nav-inner">
+      <a href="#topo" class="brand" aria-label="IAqui, início">
+        <img src="assets/logo.svg" alt="IAqui" width="82" height="30">
+      </a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#pacotes">Pacotes</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+      <a href="#contato" class="btn btn-sm btn-neon">Diagnóstico grátis</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="glow glow-purple"></div>
+      <div class="glow glow-green"></div>
+      <p class="eyebrow reveal">IA sob medida. Pagamento único.</p>
+      <h1 class="reveal">A IA chegou aqui.<br><span class="grad">No seu negócio.</span></h1>
+      <p class="lead reveal">Chatbots, automações, planilhas inteligentes e conteúdo com IA, feitos sob medida para o seu negócio. Pagamento único: o sistema fica pronto e é seu, sem mensalidade.</p>
+      <div class="cta-row reveal">
+        <a href="#contato" class="btn btn-neon">Quero meu diagnóstico grátis</a>
+        <a href="#servicos" class="link-arrow">Ver serviços <svg class="ico-sm"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="hero-badges reveal">
+        <li><svg class="ico-sm"><use href="#i-check"/></svg> Sem mensalidade</li>
+        <li><svg class="ico-sm"><use href="#i-check"/></svg> Preço fechado antes de começar</li>
+        <li><svg class="ico-sm"><use href="#i-check"/></svg> Atendimento em todo o Brasil</li>
+      </ul>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="statement">
+      <h2 class="reveal">Sua equipe não deveria gastar horas<br>com o que a IA faz <span class="grad-green">em segundos.</span></h2>
+      <p class="reveal">Orçamento no WhatsApp, planilha feita à mão, nota esquecida, post que nunca sai. A inteligência artificial já resolve essas tarefas, e não é mais exclusividade de grandes empresas. Nós implementamos, configuramos e treinamos a sua equipe.</p>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section" id="servicos">
+      <div class="section-head">
+        <p class="eyebrow reveal">Serviços</p>
+        <h2 class="reveal">Escolha o que a sua empresa precisa.</h2>
+        <p class="sub reveal">Você monta o seu pacote. Comece por um serviço ou junte vários.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <svg class="ico"><use href="#i-chat"/></svg>
+          <h3>Chatbot inteligente</h3>
+          <p>Um atendente no WhatsApp ou no site que responde clientes a qualquer hora, passa preços e agenda horários.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico"><use href="#i-bolt"/></svg>
+          <h3>Automação de atendimento</h3>
+          <p>Mensagens de confirmação, lembretes, pós-venda e respostas rápidas funcionando sozinhos.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico"><use href="#i-gear"/></svg>
+          <h3>Automação de processos</h3>
+          <p>Mapeamos a rotina da sua empresa e automatizamos as tarefas repetitivas dos seus sistemas.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico"><use href="#i-spark"/></svg>
+          <h3>Conteúdo com IA</h3>
+          <p>Posts, legendas, artes e textos para redes sociais, com a cara da sua marca e em muito menos tempo.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico"><use href="#i-grid"/></svg>
+          <h3>Gestão interna</h3>
+          <p>Controle de estoque, pedidos, tarefas e equipe organizados em um só lugar.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico"><use href="#i-chart"/></svg>
+          <h3>Financeiro</h3>
+          <p>Fluxo de caixa, contas a pagar e a receber e relatórios claros para você decidir com segurança.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico"><use href="#i-table"/></svg>
+          <h3>Planilhas inteligentes</h3>
+          <p>Planilhas que calculam, organizam e geram relatórios sozinhas. Chega de copiar e colar.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico"><use href="#i-grad"/></svg>
+          <h3>Treinamento em IA</h3>
+          <p>Ensinamos você e sua equipe a usar IA no dia a dia, na prática e sem complicação.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section" id="como-funciona">
+      <div class="section-head">
+        <p class="eyebrow reveal">Como funciona</p>
+        <h2 class="reveal">Simples do começo ao fim.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-n">1</span>
+          <h3>Diagnóstico gratuito</h3>
+          <p>Uma reunião por videochamada para entender a sua rotina e onde a IA traz mais resultado.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">2</span>
+          <h3>Proposta com preço fechado</h3>
+          <p>Você recebe o escopo e o valor total antes de começar. Sem surpresa no meio do caminho.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">3</span>
+          <h3>Construção e testes</h3>
+          <p>Montamos tudo, testamos com você e ajustamos até ficar do jeito que foi combinado.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">4</span>
+          <h3>Entrega e treinamento</h3>
+          <p>O sistema é entregue completo e passa a ser seu. Ensinamos a usar e você não paga mensalidade.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PACOTES -->
+    <section class="section" id="pacotes">
+      <div class="section-head">
+        <p class="eyebrow reveal">Pacotes</p>
+        <h2 class="reveal">Pague uma vez. Use para sempre.</h2>
+        <p class="sub reveal">O valor final depende do tamanho da sua empresa e é fechado no diagnóstico.</p>
+      </div>
+      <div class="plans">
+        <article class="plan reveal">
+          <h3>Start</h3>
+          <p class="plan-desc">Para MEIs que querem dar o primeiro passo.</p>
+          <ul>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> 1 serviço à sua escolha</li>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> Configuração completa</li>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> Treinamento de uso</li>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> 30 dias de suporte</li>
+          </ul>
+          <a href="#contato" class="btn btn-ghost">Quero o Start</a>
+        </article>
+        <article class="plan plan-featured reveal">
+          <span class="tag">Mais escolhido</span>
+          <h3>Pro</h3>
+          <p class="plan-desc">Para pequenas empresas que querem ganhar tempo de verdade.</p>
+          <ul>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> Até 3 serviços integrados</li>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> Reuniões de acompanhamento</li>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> Treinamento da equipe</li>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> 60 dias de suporte</li>
+          </ul>
+          <a href="#contato" class="btn btn-neon">Quero o Pro</a>
+        </article>
+        <article class="plan reveal">
+          <h3>Total</h3>
+          <p class="plan-desc">Para empresas que querem a operação toda automatizada.</p>
+          <ul>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> Serviços ilimitados no projeto</li>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> Mapeamento de processos</li>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> Sistema sob medida</li>
+            <li><svg class="ico-sm"><use href="#i-check"/></svg> 90 dias de suporte</li>
+          </ul>
+          <a href="#contato" class="btn btn-ghost">Quero o Total</a>
+        </article>
+      </div>
+      <p class="fineprint reveal">Alterações pedidas depois do projeto aprovado e entregue são orçadas à parte.</p>
+    </section>
+
+    <!-- ATENDIMENTO -->
+    <section class="section region" id="atendimento">
+      <div class="region-inner">
+        <div class="reveal">
+          <p class="eyebrow">Atendimento</p>
+          <h2>Onde a sua empresa estiver.</h2>
+          <p class="sub">Todo o projeto acontece online, com o mesmo cuidado de um atendimento presencial: reuniões por videochamada, implantação remota e suporte direto com quem construiu o seu sistema.</p>
+        </div>
+        <ul class="cities reveal">
+          <li><svg class="ico-sm"><use href="#i-check"/></svg> Reuniões por videochamada</li>
+          <li><svg class="ico-sm"><use href="#i-check"/></svg> Implantação 100% remota</li>
+          <li><svg class="ico-sm"><use href="#i-check"/></svg> Suporte por WhatsApp e e-mail</li>
+          <li><svg class="ico-sm"><use href="#i-check"/></svg> Treinamento online da equipe</li>
+          <li><svg class="ico-sm"><use href="#i-check"/></svg> Proposta e escopo por escrito</li>
+          <li><svg class="ico-sm"><use href="#i-check"/></svg> Visita presencial sob consulta</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-head">
+        <p class="eyebrow reveal">Dúvidas</p>
+        <h2 class="reveal">Perguntas frequentes.</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal">
+          <summary>Preciso entender de tecnologia?</summary>
+          <p>Não. A gente cuida da parte técnica e entrega tudo funcionando, com um treinamento simples para você e sua equipe.</p>
+        </details>
+        <details class="reveal">
+          <summary>Tem mensalidade?</summary>
+          <p>Não cobramos mensalidade. Você paga o projeto uma vez e o sistema é seu. Algumas ferramentas de terceiros (como a API oficial do WhatsApp) podem ter custo próprio, e isso é explicado na proposta antes de você fechar.</p>
+        </details>
+        <details class="reveal">
+          <summary>Quanto tempo leva?</summary>
+          <p>Projetos simples ficam prontos em poucos dias. Automações maiores levam de 2 a 4 semanas. O prazo vem escrito na proposta.</p>
+        </details>
+        <details class="reveal">
+          <summary>E se eu quiser mudar algo depois?</summary>
+          <p>Durante o projeto, os ajustes combinados estão inclusos. Depois da entrega aprovada, novas alterações são orçadas à parte, sempre com valor fechado.</p>
+        </details>
+        <details class="reveal">
+          <summary>Meu negócio é muito pequeno. Vale a pena?</summary>
+          <p>Vale principalmente para quem é pequeno: é quem mais sente falta de tempo. O pacote Start foi pensado para MEIs.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section contact" id="contato">
+      <div class="glow glow-purple glow-sm"></div>
+      <div class="section-head">
+        <p class="eyebrow reveal">Contato</p>
+        <h2 class="reveal">Vamos conversar sobre o<br><span class="grad">seu negócio?</span></h2>
+        <p class="sub reveal">O diagnóstico é gratuito e sem compromisso. Respondemos no mesmo dia.</p>
+      </div>
+      <form class="form reveal" id="lead-form" novalidate>
+        <div class="field">
+          <label for="f-nome">Seu nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-empresa">Empresa</label>
+          <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+        </div>
+        <div class="field field-full">
+          <label for="f-servico">O que você quer melhorar?</label>
+          <select id="f-servico" name="servico">
+            <option>Ainda não sei, quero um diagnóstico</option>
+            <option>Chatbot inteligente</option>
+            <option>Automação de atendimento</option>
+            <option>Automação de processos</option>
+            <option>Conteúdo com IA</option>
+            <option>Gestão interna</option>
+            <option>Financeiro</option>
+            <option>Planilhas inteligentes</option>
+            <option>Treinamento em IA</option>
+          </select>
+        </div>
+        <div class="field field-full">
+          <label for="f-msg">Conte um pouco (opcional)</label>
+          <textarea id="f-msg" name="mensagem" rows="3"></textarea>
+        </div>
+        <div class="form-actions field-full">
+          <button type="submit" class="btn btn-neon" data-channel="whatsapp"><svg class="ico-sm"><use href="#i-wa"/></svg> Enviar pelo WhatsApp</button>
+          <button type="submit" class="btn btn-ghost" data-channel="email"><svg class="ico-sm"><use href="#i-mail"/></svg> Enviar por e-mail</button>
+        </div>
+        <p class="form-error field-full" id="form-error" role="alert" hidden>Por favor, preencha o seu nome.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="IAqui" width="110" height="40">
+      </div>
+      <p class="footer-tag">A IA chegou aqui. No seu negócio.</p>
+      <div class="footer-links">
+        <a href="mailto:luciocamargocandido@gmail.com"><svg class="ico-sm"><use href="#i-mail"/></svg> luciocamargocandido@gmail.com</a>
+        <a href="#" data-wa-link><svg class="ico-sm"><use href="#i-wa"/></svg> WhatsApp</a>
+        <a href="https://instagram.com/iaqui" target="_blank" rel="noopener"><svg class="ico-sm"><use href="#i-ig"/></svg> @iaqui</a>
+      </div>
+      <p class="copy">© <span id="ano">2026</span> IAqui · Atendimento em todo o Brasil</p>
+    </div>
+  </footer>
+
+  <a href="#" class="wa-float" data-wa-link aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+  <script src="script.js"></script>
+</body>
+</html>
