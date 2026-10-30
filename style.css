@@ -128,6 +128,10 @@ main { overflow-x: clip; }
 .plan ul { list-style: none; display: grid; align-content: start; gap: 12px; margin-bottom: 32px; flex: 1; font-size: 15px; }
 .plan li { display: flex; gap: 10px; align-items: center; }
 .plan li .ico-sm { color: var(--green); }
+.price-was { color: #6b6b75; font-size: 13px; margin-bottom: 2px; }
+.price-setup strong { color: var(--green); font-weight: 600; }
+.price-once s { color: #6b6b75; }
+.launch { display: inline-block; background: var(--green); color: #05140b; font-weight: 700; font-size: 12px; padding: 3px 10px; border-radius: 980px; margin-right: 8px; box-shadow: 0 0 14px rgba(57,255,136,.5); }
 .price { display: flex; align-items: baseline; gap: 4px; }
 .price-n { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; }
 .price-u { color: var(--muted); font-size: 16px; }
