@@ -124,10 +124,16 @@ main { overflow-x: clip; }
 .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
 .plan { position: relative; display: flex; flex-direction: column; padding: 38px 30px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
 .plan h3 { font-size: 30px; }
-.plan-desc { color: var(--muted); font-size: 15px; margin: 8px 0 26px; min-height: 45px; }
-.plan ul { list-style: none; display: grid; gap: 12px; margin-bottom: 32px; flex: 1; font-size: 15px; }
+.plan-desc { color: var(--muted); font-size: 15px; margin: 8px 0 20px; min-height: 45px; }
+.plan ul { list-style: none; display: grid; align-content: start; gap: 12px; margin-bottom: 32px; flex: 1; font-size: 15px; }
 .plan li { display: flex; gap: 10px; align-items: center; }
 .plan li .ico-sm { color: var(--green); }
+.price { display: flex; align-items: baseline; gap: 4px; }
+.price-n { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; }
+.price-u { color: var(--muted); font-size: 16px; }
+.price-setup { color: var(--muted); font-size: 14px; margin: 2px 0 24px; }
+.price-once { color: var(--muted); font-size: 13px; text-align: center; margin-top: 14px; }
+.plan-featured .price-n { color: var(--green); text-shadow: 0 0 20px rgba(57,255,136,.35); }
 .plan-featured { border-color: rgba(168,85,247,.7); box-shadow: 0 0 50px rgba(168,85,247,.25), inset 0 0 40px rgba(168,85,247,.06); }
 .tag { position: absolute; top: -12px; left: 30px; background: var(--green); color: #05140b; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 980px; box-shadow: 0 0 16px rgba(57,255,136,.6); }
 .fineprint { color: var(--muted); font-size: 13px; text-align: center; margin-top: 28px; }
