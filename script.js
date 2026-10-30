@@ -44,6 +44,13 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+// "Quero este" nos cards: já marca o serviço no formulário
+document.querySelectorAll("[data-servico]").forEach((a) => {
+  a.addEventListener("click", () => {
+    form.servico.value = a.dataset.servico;
+  });
+});
+
 // Animação de entrada ao rolar
 const io = new IntersectionObserver(
   (entries) => entries.forEach((en) => {

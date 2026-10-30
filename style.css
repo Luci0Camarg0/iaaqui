@@ -108,7 +108,14 @@ main { overflow-x: clip; }
 .card:hover { border-color: rgba(168,85,247,.55); transform: translateY(-4px); box-shadow: 0 0 40px rgba(168,85,247,.18); }
 .card .ico { color: var(--purple-soft); margin-bottom: 22px; filter: drop-shadow(0 0 8px rgba(168,85,247,.6)); }
 .card:nth-child(even) .ico { color: var(--green); filter: drop-shadow(0 0 8px rgba(57,255,136,.55)); }
+.card { display: flex; flex-direction: column; }
 .card p { color: var(--muted); font-size: 15px; margin-top: 10px; }
+.card-foot { margin-top: auto; padding-top: 20px; display: grid; gap: 10px; }
+.card .card-price { color: var(--text); font-size: 18px; font-weight: 700; letter-spacing: -0.01em; margin-top: 0; }
+.card-price span { display: block; color: var(--muted); font-size: 12px; font-weight: 500; }
+.card-price small { color: var(--muted); font-size: 13px; font-weight: 500; }
+.card-cta { display: inline-flex; align-items: center; gap: 6px; color: var(--green); font-size: 14px; font-weight: 600; }
+.card-cta:hover { text-decoration: underline; }
 
 /* Passos */
 .steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: s; }
